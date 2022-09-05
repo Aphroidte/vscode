@@ -7,6 +7,7 @@
     - [1.2.2. VSCode 配置同步](#122-vscode-配置同步)
     - [1.2.3. Python](#123-python)
     - [1.2.4. C/C++](#124-cc)
+    - [1.2.5. Go](#125-go)
   - [1.3. FAQ](#13-faq)
     - [1.3.1. Q: VSCode提示安装似乎损坏，请重新安装](#131-q-vscode提示安装似乎损坏请重新安装)
     - [1.3.2. remote-ssh 远程连接时报错 Bad owner or permissions on xxxx/.ssh/config](#132-remote-ssh-远程连接时报错-bad-owner-or-permissions-on-xxxxsshconfig)
@@ -49,6 +50,10 @@
 
 - Microsoft官方 *C/C++* 插件: [官方文档](extensions/C_C++.md)
 - Microsoft官方 *Makefile Tools* 插件: [官方文档](extensions/makefile_tools.md)
+
+### 1.2.5. Go
+
+- Microsoft官方 *Go* 插件: [官方文档](extensions/Go.md)
 
 ## 1.3. FAQ
 
