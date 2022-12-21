@@ -172,6 +172,95 @@ Table of Contents
 
 > 有关设置范围及其文件位置的全面说明，请参阅 [设置文档](https://code.visualstudio.com/docs/getstarted/settings)。
 
+工作区设置的样例：
+
+```json
+{
+    "folders": [
+        {
+            "path": "../../../../data/home/arnicedeng/code-workspace/cxx/futc-outbound"
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.tcc": "cpp",
+        },
+        "C_Cpp.default.compilerPath": "/bin/gcc",
+        "C_Cpp.default.includePath": [
+            /////////////////////////////////////////////////////////////////////////////////////////////////
+            // stl库以及系统头文件
+            // "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/**",
+            // "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux/**",
+            // "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward/**",
+            // "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/**",
+            // "/usr/local/include/**",
+            // "/usr/include/**",
+            /////////////////////////////////////////////////////////////////////////////////////////////////
+            //! 公共库 fsi_libs 相关头文件
+            // srpc相关头文件
+            "/usr/local/fsi_libs/srpc_lib/include/",
+            "/usr/local/fsi_libs/srpc_lib/include/sync_incl/",
+            "/usr/local/fsi_libs/srpc_lib/include/rpc_incl/",
+            // commlib 相关头文件（如 monitor 属性的上报）
+            "/usr/local/fsi_libs/commlib/baselib/",
+            // ftrace 相关头文件
+            "/usr/local/fsi_libs/svr_lib/proto3/ftrace/include/ftrace/",
+            // cmlb 相关头文件
+            "/usr/local/fsi_libs/svr_lib/fsi2/include/cmlb/",
+            "/usr/local/fsi_libs/svr_lib/fsi2/include/ut",
+            "/usr/local/fsi_libs/uls_lib/",
+            "/usr/local/fsi_libs/cmlb_lib/",
+            // rabbitmq 相关头文件
+            "/usr/local/fsi_libs/svr_lib/3rd_party/rabbitmq/include/",
+            // spp 相关头文件
+            "/usr/local/fsi_libs/srpc_lib/include/spp_incl/",
+            
+            // 协程相关头文件
+            "/usr/local/fsi_libs/svr_lib/fsi/include/nw/",
+
+            // 第三方库
+            //    1. MPFR 库是一个用于具有正确舍入的多精度浮点计算的 C 库。<https://www.mpfr.org/>
+            "/usr/local/fsi_libs/svr_lib/3rd_party/mpfr/include/",
+            //    2. lmock 库是 gtest 单元测试模块需要引入的库
+            "/usr/local/fsi_libs/svr_lib/3rd_party/lmock/include/",
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////
+            //! 个人环境
+            // google protobuf 相关头文件定义
+            "/data/home/arnicedeng/env/anaconda3/include/"
+        ],
+        // 使用 CMake 或 compiledb 生成 compile_commands.json，让 VSCode 可以知道整个项目的引用
+        "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json"
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "echo",
+                "type": "shell",
+                "command": "echo ${workspaceFolder:up_fix_delay_time_tool}",
+                "problemMatcher": []
+            },
+            {
+                "label": "make_build",
+                "args": [],
+                "type": "shell",
+                "command": "make"
+            },
+            {
+                "label": "make_clean",
+                "args": [
+                    "clean"
+                ],
+                "type": "shell",
+                "command": "make",
+                "problemMatcher": []
+            }
+        ]
+    },
+}
+```
+
 ### 1.4.1. 单目录工作区的设置
 
 当您将文件夹打开为工作空间时，工作空间设置将存储在 .vscode/settings.json 中。

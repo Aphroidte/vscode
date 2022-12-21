@@ -7,6 +7,7 @@ Table of Contents
     - [1.1.1. Windows 安装 MinGW-x64](#111-windows-安装-mingw-x64)
     - [1.1.2. Linux 安装 GCC](#112-linux-安装-gcc)
   - [1.2. 配置 C/C++ 扩展](#12-配置-cc-扩展)
+    - [1.2.1. 使用 compile\_commands.json 配置项目引用](#121-使用-compile_commandsjson-配置项目引用)
   - [1.3. 配置 VS Code 自带的编译与调试选项](#13-配置-vs-code-自带的编译与调试选项)
     - [1.3.1. 配置编译任务](#131-配置编译任务)
       - [1.3.1.1. 配置 MakeFile 作为编译工具](#1311-配置-makefile-作为编译工具)
@@ -79,6 +80,57 @@ to be continue..
 > ![PNG-在不同范围内进行配置](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E5%9C%A8%E4%B8%8D%E5%90%8C%E8%8C%83%E5%9B%B4%E5%86%85%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE.png)
 
 配置完成后，C/C++ 扩展就能正常的进行语法提示、跳转了。
+
+### 1.2.1. 使用 compile_commands.json 配置项目引用
+
+使用 CMake 或 compiledb 生成 `compile_commands.json`，让 VSCode 可以知道整个项目的引用；compiledb 的使用方法：
+
+```sh
+#!/bin/sh
+
+compiledb_path="$(command -v compiledb)"
+path="$(pwd)"
+if ! [ -x $compiledb_path ]; then
+  make all
+  exit 1
+fi
+
+root_path="${path}/../../"
+DEPEND_DIRS=(${root_path}/component)
+DEPEND_DIRS+=(${root_path}/proto)
+DEPEND_DIRS+=(${root_path}/proto/qta_fetch_proxy)
+
+for dir in ${DEPEND_DIRS[*]}; do
+    cd $dir
+    compiledb -o $root_path"/compile_commands.json" make all
+done
+
+# 编译源代码
+cd $path
+compiledb -o $root_path"/compile_commands.json" make all -j4
+```
+
+在项目根目录生成 `compile_commands.json`，然后在项目配置或工作区配置或文件夹配置中指定该文件：
+
+```json
+{
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json"
+
+    // 或
+    "Configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/compile_commands.json"
+        }
+    ]
+}
+```
 
 ## 1.3. 配置 VS Code 自带的编译与调试选项
 
