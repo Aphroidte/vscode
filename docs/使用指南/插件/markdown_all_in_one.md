@@ -120,7 +120,7 @@
 - 数学函数（在选项 `markdown.extension.katex.macros` 中进行配置）
 - Reference links：如下图所示。
 
-![PNG-reference_links](../../pic/docs/extensions/markdown_all_in_one/reference-link.png)
+![PNG-reference_links](../../../pic/docs/extensions/markdown_all_in_one/reference-link.png)
 
 #### 1.1.1.8. 其他
 
@@ -173,4 +173,4 @@
 - 在需要的地方添加：`[^number]`，如：`[^1]`
 - 在文本末尾或其他合适的地方定义：`[^number]:xxxxxxx`
 
-![PNG-Markdown Footnotes_样例](../../pic/docs/extensions/markdown_all_in_one/Markdown-Footnotes_example.png)
+![PNG-Markdown Footnotes_样例](../../../pic/docs/extensions/markdown_all_in_one/Markdown-Footnotes_example.png)

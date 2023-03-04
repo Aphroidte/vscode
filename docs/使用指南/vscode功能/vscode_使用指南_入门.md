@@ -28,7 +28,7 @@
 
 到 [VSCode 官网](https://code.visualstudio.com/) 下载的最新版本。并按照提示进行安装。
 
-![PNG-VSCode下载页面](../pic/docs/vscode_使用指南_入门/VSCode安装_下载详情.png)
+![PNG-VSCode下载页面](../../../pic/docs/vscode_使用指南_入门/VSCode安装_下载详情.png)
 
 ## 1.2. VSCode 插件配置
 

@@ -79,12 +79,12 @@
 <!-- markdownlint-disable MD036 -->
 **单击使用 GitHub 登录**
 
-![PNG-logon_with_github](../../pic/docs/extensions/settings_sync/login-with-github.png)
+![PNG-logon_with_github](../../../pic/docs/extensions/settings_sync/login-with-github.png)
 
 - 在浏览器上登录 GitHub 并在收到成功消息后关闭浏览器选项卡。（如果您第一次使用 *Settings Sync*，则在您上传设置时会自动创建 *GIST*。）
 - 如果您已经拥有 GitHub Gist，将打开新窗口以允许您选择 GitHub Gist 或跳过以创建新 Gist。
 
-![PNG-existing-gist](../../pic/docs/extensions/settings_sync/existing-gist.png)
+![PNG-existing-gist](../../../pic/docs/extensions/settings_sync/existing-gist.png)
 
 您始终可以通过访问 `<https://gist.github.com>` 并检查名为 `cloudSettings` 的 gist 来验证创建的 gist。
 
@@ -264,15 +264,15 @@ Gist 设置存储在带有同步前缀的 Visual Studio 代码 *settings.json* �
 
 **如何生成token**：*GitHub Setting* > *Developer settings* > *Personal access tokens* > *Generate new token*。Token的名字（Note）填 `setting sync` 用以说明用途，权限只勾上 gist（`creating gists`）即可，然后 `Generate token`，复制这个 token 即可。
 
-![PNG-生成 Token](../../pic/docs/extensions/settings_sync/生成Token的方法.jpg)
+![PNG-生成 Token](../../../pic/docs/extensions/settings_sync/生成Token的方法.jpg)
 
-![PNG-复制生成的Token](../../pic/docs/extensions/settings_sync/复制生成的Token.jpg)
+![PNG-复制生成的Token](../../../pic/docs/extensions/settings_sync/复制生成的Token.jpg)
 
 ### 1.2.2. 创建 Gist
 
 登录 [Gist](https://gist.github.com/)，点击右上角的 `+` 标记进入创建 *Gist* 的页面：
 
-![PNG-创建Gist](../../pic/docs/extensions/settings_sync/create_gist.png)
+![PNG-创建Gist](../../../pic/docs/extensions/settings_sync/create_gist.png)
 
 > 默认创建的是私有的 Gist，可以在创建按钮右边找到下拉标记，点击即可看到创建 *Public Gist* 的选项。
 
@@ -280,6 +280,6 @@ Gist 设置存储在带有同步前缀的 Visual Studio 代码 *settings.json* �
 
 在命令面板中运行命令：`Sync: Advanced Options` -> 打开配置：
 
-![PNG-配置SettingSync](../../pic/docs/extensions/settings_sync/配置Setting_sync.png)
+![PNG-配置SettingSync](../../../pic/docs/extensions/settings_sync/配置Setting_sync.png)
 
 在配置输入刚才创建的 *Token* 以及 *Gist* 的 ID 即可。

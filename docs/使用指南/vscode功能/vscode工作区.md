@@ -45,7 +45,7 @@ Table of Contents
 
 除了使用 VS Code 打开文件夹外，您无需对文件夹进行任何操作即可成为 VS Code 工作区：你只需要在 *VS Code* 中打开文件夹，然后选择信任即可：
 
-![PNG-单目录工作区创建](../../pic/docs/user_guide/workspace/单文件夹工作区_创建方式.png)
+![PNG-单目录工作区创建](../../../pic/docs/user_guide/workspace/单文件夹工作区_创建方式.png)
 
 该目录就会成为被信任的工作区，之后您就可以在该工作区添加特定于其他文件夹的配置，例如特定于工作区的设置（相对于全局用户设置）、任务定义和调试启动文件（请参阅下面的工作区设置部分）。
 
@@ -74,7 +74,7 @@ Table of Contents
 
 *Multi-root workspaces* 通常用于在 *VS Code* 中管理过个项目，尤其是多个相关联的项目。例如，您可能有一个存储库，其中包含您希望在更新产品源代码时保持最新的产品文档。
 
-![PNG-多根工作区的应用样例_来源VSCode官网](../../../../pic/software/ides/vscode/user_guide/workspace/多根工作区的应用样例_来源VSCode官网.png)
+![PNG-多根工作区的应用样例_来源VSCode官网](../../../pic/docs/user_guide/workspace/多根工作区的应用样例_来源VSCode官网.png)
 
 ### 1.3.1. 创建 Multi-root workspaces
 
@@ -126,11 +126,11 @@ Table of Contents
 
 这将导致以下资源管理器显示：
 
-![PNG-命令多根工作区中的目录名](../../../../pic/software/ides/vscode/user_guide/workspace/多根工作区_named-folders.png)
+![PNG-命令多根工作区中的目录名](../../../pic/docs/user_guide/workspace/多根工作区_named-folders.png)
 
 `.code-workspace` 文件还可以包含 *Settings* 下的 *Workspace* 全局设置和 *extensions* 下的扩展建议，我们将在下面讨论。
 
-![PNG-多根工作区的设置](../../../../pic/software/ides/vscode/user_guide/workspace/多根工作区_workspace-file-schema.png)
+![PNG-多根工作区的设置](../../../pic/docs/user_guide/workspace/多根工作区_workspace-file-schema.png)
 
 ### 1.3.4. 与 Multi-root workspaces 有关的通用 UI 的改变
 
@@ -164,7 +164,7 @@ Table of Contents
 
 不受支持的编辑器范围的文件夹设置将在您的文件夹设置中显示为灰色，并从默认文件夹设置列表中过滤掉。您还将在设置前面看到一个信息图标。
 
-![PNG-不支持的文件夹设置](../../../../pic/software/ides/vscode/user_guide/workspace/unsupported-setting-info.png)
+![PNG-不支持的文件夹设置](../../../pic/docs/user_guide/workspace/unsupported-setting-info.png)
 
 ## 1.4. 工作区设置
 
@@ -176,13 +176,13 @@ Table of Contents
 
 当您将文件夹打开为工作空间时，工作空间设置将存储在 .vscode/settings.json 中。
 
-![PNG-单目录工作区的设置](../../../../pic/software/ides/vscode/user_guide/workspace/单目录工作区的设置_single-folder-settings.png)
+![PNG-单目录工作区的设置](../../../pic/docs/user_guide/workspace/单目录工作区的设置_single-folder-settings.png)
 
 ### 1.4.2. Multi-root workspace的设置
 
 当您打开 `.code-workspace` 作为工作区时，所有工作区设置都将添加到 `.code-workspace` 文件中。但是您仍然可以为每个根文件夹配置设置，设置编辑器将显示第三个设置范围，称为文件夹设置：
 
-![PNG-多根工作区的设置](../../../../pic/software/ides/vscode/user_guide/workspace/多根工作区_multi-root-settings.png)
+![PNG-多根工作区的设置](../../../pic/docs/user_guide/workspace/多根工作区_multi-root-settings.png)
 
 每个文件夹配置的设置将覆盖 `.code-workspace` 中定义的设置
 
@@ -190,7 +190,7 @@ Table of Contents
 
 可以在打开设置(UI)后，使用 `@modified` 过滤器，检查您配置了哪些设置。如果设置的值与默认值不同，或者如果其值在相应的设置 JSON 文件中明确设置，则会在此过滤器下显示设置。
 
-![PNG-modified过滤器](../../../../pic/software/ides/vscode/user_guide/workspace/modified-filter-settings.png)
+![PNG-modified过滤器](../../../pic/docs/user_guide/workspace/modified-filter-settings.png)
 
 以下是一些可用的过滤器：
 

@@ -29,7 +29,7 @@ Table of Contents
 
 在 [*Anaconda* 官网](https://www.anaconda.com/) 下载 *Anaconda*:
 
-![PNG-win_下载Anaconda](../../pic/docs/dev_env/搭建与配置Python开发环境/win-下载anaconda.png)
+![PNG-win_下载Anaconda](../../../pic/docs/dev_env/搭建与配置Python开发环境/win-下载anaconda.png)
 
 下载完成后，按提示点击安装即可。安装完成后，在 *CMD* 中使用命令: `python --version` 检查是否安装成功。
 
@@ -37,7 +37,7 @@ Table of Contents
 
 配置 *Anaconda* 路径到环境变量中：主要是配置 *Anaconda* 以下三个路径：
 
-![PNG-win_配置anaonda的路径到环境变量中](../../pic/docs/dev_env/搭建与配置Python开发环境/win-配置anaconda的路径到环境变量中.png)
+![PNG-win_配置anaonda的路径到环境变量中](../../../pic/docs/dev_env/搭建与配置Python开发环境/win-配置anaconda的路径到环境变量中.png)
 
 > 注：上图中的路径仅为本人环境的路径，具体的路径需要视您的 *Anaconda* 安装路径而定。配置完成后，在 *CMD* (Ctrl + Shift + C) 中执行 `conda version` 命令，若能正常输出版本信息，即配置成功。
 
@@ -47,7 +47,7 @@ Table of Contents
 
 在 *VSCode* 的 marketplace 中搜索以下插件进行安装并按照提示进行设置即可
 
-![PNG-安装Python语法插件](../../pic/docs/dev_env/搭建与配置Python开发环境/vscode-下载python语法插件.png)
+![PNG-安装Python语法插件](../../../pic/docs/dev_env/搭建与配置Python开发环境/vscode-下载python语法插件.png)
 
 > 插件介绍：[VScode Python插件介绍](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 >

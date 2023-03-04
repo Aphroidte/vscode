@@ -27,17 +27,17 @@ Table of Contents
 
 您可以从 [*MSYS2* 页面](https://www.msys2.org/) 下载最新的安装程序。
 
-![PNG-下载MinGw](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/windows_%E9%80%9A%E8%BF%87MSYS2%E5%AE%89%E8%A3%85C%2B%2B%E7%BC%96%E8%AF%91%E5%99%A8.png)
+![PNG-下载MinGw](../../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/windows_%E9%80%9A%E8%BF%87MSYS2%E5%AE%89%E8%A3%85C%2B%2B%E7%BC%96%E8%AF%91%E5%99%A8.png)
 
 > **说明：** *MSYS2* 是 *Windows* 的软件分发和构建平台。它包含一个名为 *mintty*、*bash* 的命令行终端、*git* 和 *subversion* 等版本控制系统、*tar* 和 *awk* 等工具，甚至还有 *autotools* 等构建系统，所有这些都基于 *Cygwin* 的修改版本。 尽管其中一些核心部分基于 *Cygwin*，但 *MSYS2* 的主要重点是为本地 *Windows* 软件提供构建环境，并且使用 *Cygwin* 的部分保持在最低限度。 *MSYS2* 为 *GCC*、*mingw-w64*、*CPython*、*CMake*、*Meson*、*OpenSSL*、*FFmpeg*、*Rust*、*Ruby* 等提供最新的原生构建。
 
 安装 *MSYS2* 后，运行它（在 *Windows* 的搜索框中直接搜索 *MSYS2* 即可找到它），输入命令：`pacman -S --needed base-devel mingw-w64-x86_64-toolchain` 来安装 `MinGW-x64`
 
-![PNG-安装MingW-W64](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/windows_%E5%AE%89%E8%A3%85mingw-w64.png)
+![PNG-安装MingW-W64](../../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/windows_%E5%AE%89%E8%A3%85mingw-w64.png)
 
 安装完成 *Mingw-w64* 后，需要将 `gcc.exe/g++.exe` 添加到系统环境变量中：在 *Windows* 搜索框中搜索 "Mingw-w64"，打开该终端，输入 `gcc --version`，若能正确输出 *gcc* 版本，则说明已经安装成功，此时通过命令 `where gcc` 找到 `gcc.exe` 的安装路径，将 `gcc.exe` 所在的 *bin* 目录的路径添加到 `%PATH` 环境变量中，
 
-![PNG-找到GCC安装路径](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/windows_%E6%89%BE%E5%88%B0gcc%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84.png)
+![PNG-找到GCC安装路径](../../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/windows_%E6%89%BE%E5%88%B0gcc%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84.png)
 
 之后，可以在任意终端上（*MSYS2* 终端除外）输入命令：`g++ --version` 来查看是否安装成功。最后，在 *MSYS2* 终端上可通过命令 `pacman -Suy` 来更新所有的已安装的包。
 
@@ -60,23 +60,23 @@ to be continue..
 
 **配置 IntelliSense 模式**：如果用的是 *MinGW64* 提供的 *g++* 编译器，这里需要配置成 `windows-gcc-x64`
 
-![PNG-配置编译器路径与模式](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E7%BC%96%E8%AF%91%E5%99%A8%E8%B7%AF%E5%BE%84%E4%B8%8E%E6%A8%A1%E5%BC%8F.png)
+![PNG-配置编译器路径与模式](../../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E7%BC%96%E8%AF%91%E5%99%A8%E8%B7%AF%E5%BE%84%E4%B8%8E%E6%A8%A1%E5%BC%8F.png)
 
 **找到本机 *C++* 环境的包含路径**：在任意终端上（*MSYS2* 的终端除外）输入命令：`gcc -v -E -x c++ -`，即可找到本机 *C++* 环境的包含路径：
 
-![PNG-C++环境的包含路径](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E6%89%BE%E5%88%B0%E5%8C%85%E5%90%AB%E8%B7%AF%E5%BE%84.png)
+![PNG-C++环境的包含路径](../../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E6%89%BE%E5%88%B0%E5%8C%85%E5%90%AB%E8%B7%AF%E5%BE%84.png)
 
 > **说明**：如果不为配置 *VS Code* 配置包含路径的话，默认情况下，扩展搜索当前源目录、其子目录和一些特定于平台的位置。
 
 **配置包含路径以及 C++ 版本**：
 
-![PNG-配置包含路径以及C++版本](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E9%85%8D%E7%BD%AE%E5%8C%85%E5%90%AB%E8%B7%AF%E5%BE%84%E4%BB%A5%E5%8F%8AC%2B%2B%E7%89%88%E6%9C%AC.png)
+![PNG-配置包含路径以及C++版本](../../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E9%85%8D%E7%BD%AE%E5%8C%85%E5%90%AB%E8%B7%AF%E5%BE%84%E4%BB%A5%E5%8F%8AC%2B%2B%E7%89%88%E6%9C%AC.png)
 
 > **注意**：一般将 `${workspaceFolder}/**` 配置在工作区/文件夹的级别的配置中，表示包含本工作区下面的所有源文件。所有项目都要用到的包含路径，比如 *C++* 环境的包含路径以及一些第三方公共库的包含路径，都可以放到 *C/C++* 插件的用户级别或全局默认的配置中。
 >
 > 在命令面板（`Ctrl + Shift + P`）中输入命令：`Preferences: Open Settings (UI)`，打开 *VS Code* 的设置界面，搜索 `@ext:ms-vscode.cpptools`，列出 *C/C++ 扩展* 的配置，在这里就可以进行用户/工作区/文件夹等级别的配置
 >
-> ![PNG-在不同范围内进行配置](../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E5%9C%A8%E4%B8%8D%E5%90%8C%E8%8C%83%E5%9B%B4%E5%86%85%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE.png)
+> ![PNG-在不同范围内进行配置](../../../pic/docs/dev_env/%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AEC_C%2B%2B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEC_C%2B%2B%E7%9A%84%E6%8F%92%E4%BB%B6_%E5%9C%A8%E4%B8%8D%E5%90%8C%E8%8C%83%E5%9B%B4%E5%86%85%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE.png)
 
 配置完成后，C/C++ 扩展就能正常的进行语法提示、跳转了。
 
@@ -186,15 +186,15 @@ pacman -S mingw-w64-x86_64-gdb
 
 **创建 launch.json 文件**: 使用快捷键 `Ctrl + Shift + D` 打开运行和调试侧边栏, 点击 "创建 launch.json 文件":
 
-![PNG-创建launch.json文件](../../pic/docs/dev_env/搭建与配置C_C++开发环境/运行与调试_创建launch文件.png)
+![PNG-创建launch.json文件](../../../pic/docs/dev_env/搭建与配置C_C++开发环境/运行与调试_创建launch文件.png)
 
 选择项目名/文件夹名(为项目创建调试配置):
 
-![PNG-创建调试配置2](../../pic/docs/dev_env/搭建与配置C_C++开发环境/运行与调试_创建launch文件2.png)
+![PNG-创建调试配置2](../../../pic/docs/dev_env/搭建与配置C_C++开发环境/运行与调试_创建launch文件2.png)
 
 然后根据系统环境选择对应的调试程序
 
-![PNG-创建调试配置2](../../pic/docs/dev_env/搭建与配置C_C++开发环境/运行与调试_创建launch文件3.png)
+![PNG-创建调试配置2](../../../pic/docs/dev_env/搭建与配置C_C++开发环境/运行与调试_创建launch文件3.png)
 
 最终默认生成的 `launch.json` 文件如下:
 
@@ -261,11 +261,11 @@ pacman -S mingw-w64-x86_64-gdb
 1. 打开命令面板 (`Ctrl+Shift+P`) 并运行 `CMake: Select a Kit`。该扩展程序将自动扫描您计算机上的工具包并创建在您的系统上找到的编译器列表。
 2. 选择您要使用的编译器。例如，根据您安装的编译器，您可能会看到如下内容：
 
-![PNG-选择kits](../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_选择编译套件.png)
+![PNG-选择kits](../../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_选择编译套件.png)
 
 选择的套件将会显示在状态栏上：
 
-![PNG-选择的套件将会显示在状态栏上](../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_选择的套件将会显示在状态栏上.png)
+![PNG-选择的套件将会显示在状态栏上](../../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_选择的套件将会显示在状态栏上.png)
 
 要更改套件，您可以单击状态栏中的套件，或运行 `CMake: Select a Kit` 再次从命令面板中选择套件命令。如果您没有看到您正在寻找的编译器，您可以在您的项目中编辑 `cmake-tools-kits.json` 文件。要编辑文件，请打开命令面板 (`Ctrl+Shift+P`) 并运行 `CMake: Edit User-Local CMake Kits` 命令
 
@@ -280,7 +280,7 @@ variant 包含有关如何构建项目的说明。默认情况下，*CMake Tools
 
 要选择变体，请打开命令面板 (`Ctrl+Shift+P`) 运行 `CMake: Select Variant`
 
-![PNG-选择的变体将显示在状态栏中](../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_选择的变体.png)
+![PNG-选择的变体将显示在状态栏中](../../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_选择的变体.png)
 
 ### 1.4.3. CMake: Configure
 
@@ -288,7 +288,7 @@ variant 包含有关如何构建项目的说明。默认情况下，*CMake Tools
 
 配置项目后，您就可以构建了。打开命令面板 (`Ctrl+Shift+P`) 并运行 `CMake: Build` 命令，或从状态栏中选择 Build 按钮。
 
-![PNG-Cmake_build](../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_build.png)
+![PNG-Cmake_build](../../../pic/docs/dev_env/搭建与配置C_C++开发环境/配置cmake_tools_build.png)
 
 您可以通过从命令面板中选择 `CMake：Set Build Target` 来选择要构建的目标。默认情况下，*CMake* 工具会构建所有目标。选定的目标将出现在 *Build* 按钮旁边的状态栏中。
 

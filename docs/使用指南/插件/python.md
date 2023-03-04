@@ -35,35 +35,35 @@ Table of Contents
 
 在 *VSCode* 的命令面板（Ctrl + Shift + P）中输入 `python select interpreter`：
 
-![PNG-设置python解释器](../../pic/docs/extensions/python/设置python解析器路径.png)
+![PNG-设置python解释器](../../../pic/docs/extensions/python/设置python解析器路径.png)
 
 然后在弹出的对话框中，选择您的 *Python* 解释器即可：
 
-![PNG-选择python解释器](../../pic/docs/extensions/python/选择python解析器.png)
+![PNG-选择python解释器](../../../pic/docs/extensions/python/选择python解析器.png)
 
 ### 1.3.2. 配置 *Python* 调试器
 
 首先要打开一个 *Python* 文件，然后按照下图的步骤进行选择：
 
-![PNG-选择Python调试器](../../pic/docs/extensions/python/配置Python调试器.png)
+![PNG-选择Python调试器](../../../pic/docs/extensions/python/配置Python调试器.png)
 
 > 注：**在没有打开 *Python* 文件的情况下进行选择， 是不会出现 Flask 这个选项的。**
 
 然后确认 *Flask* 作为 *Python* 的调试器：
 
-![PNG-确认Flask作为Python的调试器](../../pic/docs/extensions/python/确认Flask作为Python的调试器.png)
+![PNG-确认Flask作为Python的调试器](../../../pic/docs/extensions/python/确认Flask作为Python的调试器.png)
 
 最后会生成一个 `launch.json` 的文件，以及 `Python: Flask` 的选项：
 
-![PNG-配置Flask成功后的结果](../../pic/docs/extensions/python/配置调试器成功后的结果.png)
+![PNG-配置Flask成功后的结果](../../../pic/docs/extensions/python/配置调试器成功后的结果.png)
 
 ### 1.3.3. 配置测试
 
 在命令面板（Ctrl + Shift + P）中运行命令：`Configure Tests`
 
-![PNG-配置测试](../../pic/docs/extensions/python/配置Test.png)
+![PNG-配置测试](../../../pic/docs/extensions/python/配置Test.png)
 
-![PNG-配置的测试类型](../../pic/docs/extensions/python/选择配置的测试类型.png)
+![PNG-配置的测试类型](../../../pic/docs/extensions/python/选择配置的测试类型.png)
 
 ## 1.4. Jupyter Notebook quick start
 
