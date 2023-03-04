@@ -1,17 +1,25 @@
-# 1. vscode
+# README
 
-VS Code 使用指北
-
-- [1. vscode](#1-vscode)
-  - [1.1. 总览](#11-总览)
-
-## 1.1. 总览
-
-- [VSCode 使用指南（入门）](./docs/vscode_使用指南_入门.md)
-- 开发环境：[README](./docs/dev_env/README.md)
-- User Guide:
-  - 工作区：[VSCode工作区](./docs/user_guide/vscode工作区.md)
-- 配置：
-  - python注释：[自动生成Python注释](./docs/config/python_自动生成注释.md)
-- VSCode 美化
-  - 终端美化：[美化终端](./docs/beautify/美化终端.md)
+- [README](./docs/)
+  - [开发环境](./docs/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/)
+    - [C++](docs/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/C%2B%2B/)
+      - [搭建与配置C_C++开发环境](docs/开发环境/C++/搭建与配置C_C++开发环境.md)
+    - [Python](docs/开发环境/Python/)
+      - [搭建与配置python开发环境](./docs/开发环境/Python/搭建与配置python开发环境.md)
+      - [Python 自动生成注释](docs/开发环境/Python/python_自动生成注释.md)
+    - [mixed](docs/开发环境/mixed/)
+      - [隔离不同的开发环境](docs/开发环境/mixed/隔离不同的开发环境.md)
+  - [美化](docs/%E7%BE%8E%E5%8C%96/)
+    - [终端美化](docs/美化/美化终端.md)
+  - [使用指南](docs/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/)
+    - [vscode功能](docs/使用指南/vscode功能/)
+      - [vscode工作区](docs/使用指南/vscode功能/vscode工作区.md)
+      - [vscode 入门](docs/使用指南/vscode功能/vscode_使用指南_入门.md)
+    - [插件](docs/使用指南/插件/)
+      - [C_C++](docs/使用指南/插件/C_C++.md)
+      - [Go](docs/使用指南/插件/Go.md)
+      - [makefile_tools](docs/使用指南/插件/makefile_tools.md)
+      - [markdown_all_in_one](docs/使用指南/插件/markdown_all_in_one.md)
+      - [markdown_lint](docs/使用指南/插件/markdown_lint.md)
+      - [markdown+math](docs/使用指南/插件/markdown+math.md)
+      - [python](docs/使用指南/插件/python.md)
